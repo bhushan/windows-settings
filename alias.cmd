@@ -1,7 +1,7 @@
 @echo off
 
 :: Commands
-DOSKEY DOSKEY=notepad d:\workspace\winSettings\DOSKEY.cmd
+DOSKEY alias=notepad d:\workspace\windows-settings\alias.cmd
 DOSKEY work= d: && cd d:\workspace\
 DOSKEY ls=dir /B
 DOSKEY cc=cls
