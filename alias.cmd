@@ -1,9 +1,15 @@
 @echo off
 
 :: Commands
-DOSKEY alias=notepad G:\workspace\winSettings\alias.cmd
-DOSKEY work= g: && cd g:\workspace\
+DOSKEY DOSKEY=notepad d:\workspace\winSettings\DOSKEY.cmd
+DOSKEY work= d: && cd d:\workspace\
 DOSKEY ls=dir /B
 DOSKEY cc=cls
 DOSKEY ..=cd ..
-DOSKEY pa=php artisan $*
+
+DOSKEY p=phpunit
+DOSKEY pf=phpunit --filter $* 
+DOSKEY art=php artisan $*
+DOSKEY migrate=php artisan migrate
+DOSKEY fresh=php artisan migrate:fresh
+DOSKEY seed=php artisan migrate:fresh --seed
