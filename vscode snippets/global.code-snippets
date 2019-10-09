@@ -1,0 +1,38 @@
+{
+    "Test Function": {
+        "scope": "php",
+        "prefix": "tfun",
+        "body": [
+            "/** @test */",
+            "public function a_$1()",
+            "{",
+            "$2",
+            "}"
+        ],
+        "description": "Creates a test function "
+    },
+    "Test Class": {
+        "prefix": "tclass",
+        "body": [
+            "<?php",
+            "",
+            "namespace Tests\\\\${TM_DIRECTORY/^.+\\\\(.*)$/$1/};",
+            "",
+            "use Tests\\TestCase;",
+            "use Illuminate\\Foundation\\Testing\\RefreshDatabase;",
+            "",
+            "class $TM_FILENAME_BASE extends TestCase",
+            "{",
+            "use RefreshDatabase;",
+            "",
+            "/** @test */",
+            "public function a_$1()",
+            "{",
+            "$2",
+            "}",
+            "}",
+            ""
+        ],
+        "description": "Creates a test class"
+    }
+}
